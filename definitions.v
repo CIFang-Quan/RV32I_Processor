@@ -7,6 +7,9 @@
 `define INST_WIDTH 32
 `define NUM_REGISTER 32
 
+`define DMEM_SIZE `DATA_WIDTH*(2^`ADDR_WIDTH) // 2^32 bytes
+`define IMEM_SIZE `INST_WIDTH*(2^`DATA_WIDTH) // 2^32 bytes
+
 `define FUNCT_3 3
 `define FUNCT_7 7
 

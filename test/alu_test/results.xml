@@ -1,18 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1742760947" />
-    <testcase name="test_alu_add" classname="alu_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/alu_test/alu_test.py" lineno="8" time="0.0006721019744873047" sim_time_ns="1.001" ratio_time="1489.3573267115996" />
-    <testcase name="test_alu_sub" classname="alu_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/alu_test/alu_test.py" lineno="22" time="0.0003085136413574219" sim_time_ns="1.001" ratio_time="3244.5891066460586" />
-    <testcase name="test_alu_and" classname="alu_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/alu_test/alu_test.py" lineno="36" time="0.0002765655517578125" sim_time_ns="1.0010000000000003" ratio_time="3619.3950896551737" />
-    <testcase name="test_alu_or" classname="alu_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/alu_test/alu_test.py" lineno="50" time="0.0003516674041748047" sim_time_ns="1.0009999999999994" ratio_time="2846.4395281355914" />
-    <testcase name="test_alu_xor" classname="alu_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/alu_test/alu_test.py" lineno="65" time="0.00030040740966796875" sim_time_ns="1.0010000000000003" ratio_time="3332.1415111111123" />
-    <testcase name="test_alu_nor" classname="alu_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/alu_test/alu_test.py" lineno="80" time="0.00020599365234375" sim_time_ns="1.0010000000000003" ratio_time="4859.373037037039" />
-    <testcase name="test_alu_sll" classname="alu_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/alu_test/alu_test.py" lineno="95" time="0.0002579689025878906" sim_time_ns="1.0009999999999994" ratio_time="3880.3126654343787" />
-    <testcase name="test_alu_srl" classname="alu_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/alu_test/alu_test.py" lineno="109" time="0.00022172927856445312" sim_time_ns="1.0009999999999994" ratio_time="4514.514305376341" />
-    <testcase name="test_alu_sra" classname="alu_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/alu_test/alu_test.py" lineno="123" time="0.0003573894500732422" sim_time_ns="1.0010000000000012" ratio_time="2800.8661134089425" />
-    <testcase name="test_alu_slt1" classname="alu_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/alu_test/alu_test.py" lineno="137" time="0.0002472400665283203" sim_time_ns="1.0009999999999994" ratio_time="4048.696532304723" />
-    <testcase name="test_alu_slt2" classname="alu_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/alu_test/alu_test.py" lineno="150" time="0.0002193450927734375" sim_time_ns="1.0009999999999994" ratio_time="4563.585113043476" />
-    <testcase name="test_alu_sltu1" classname="alu_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/alu_test/alu_test.py" lineno="163" time="0.00023674964904785156" sim_time_ns="1.0010000000000012" ratio_time="4228.0949687814755" />
-    <testcase name="test_alu_sltu2" classname="alu_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/alu_test/alu_test.py" lineno="176" time="0.0003159046173095703" sim_time_ns="1.0009999999999994" ratio_time="3168.6779652830173" />
+    <property name="random_seed" value="1743250300" />
+    <testcase name="test_alu_add" classname="alu_test" file="/home/tsingfong/Arch/RV32I_Processor/test/alu_test/alu_test.py" lineno="25" time="0.0002586841583251953" sim_time_ns="1.001" ratio_time="3869.5836903225804" />
   </testsuite>
 </testsuites>

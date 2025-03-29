@@ -1,5 +1,6 @@
 
-
+PWD=$(shell pwd)
+export PYTHONPATH := $(PWD)/../model:$(PYTHONPATH)
 
 
 # use verilator as sim
@@ -9,11 +10,12 @@ SIM ?= verilator
 TOPLEVEL_LANG ?= verilog
 
 # source code list 
-VERILOG_SOURCES = ../../reg_file.v
+VERILOG_SOURCES = ../../definitions.v \
+			 	 ../../reg_file.v
 #$(shell find ../../ -name "*.v")
 #TOP LEVEL module
 
-TOPLEVEL = reg_file
+TOPLEVEL = Reg_file
 
 # module direct to test
 MODULE = reg_file_test

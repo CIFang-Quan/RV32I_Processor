@@ -3,15 +3,15 @@
 // it support add, sub, and, or, xor, nor,
 //             sll, srl, sra, slt, sltu operation
 
-`include "definitions.vh"
-// `default_nettype none
-// `timescale 1ns/1ns
+//`include "definitions.v"
+`default_nettype none
+`timescale 1ns/1ns
 
 module Alu (
     input wire [3:0] i_alu_ctrl,
-    input wire [`DATA_WIDTH:0] i_a,
-    input wire [`DATA_WIDTH:0] i_b,
-    output reg [`DATA_WIDTH:0] o_res
+    input wire [`DATA_WIDTH-1:0] i_a,
+    input wire [`DATA_WIDTH-1:0] i_b,
+    output reg [`DATA_WIDTH-1:0] o_res
 );
     
     always @* begin

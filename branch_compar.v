@@ -3,6 +3,10 @@
 // we support beq,bne,blt,bltu(bge,bgeu is implicit support
 // since we support blt,bltu)
 
+//`include "definitions.v"
+`default_nettype none
+`timescale 1ns/1ns
+
 module Brcmptop (
     input wire [`DATA_WIDTH-1:0] i_rs1,
     input wire [`DATA_WIDTH-1:0] i_rs2,
@@ -11,7 +15,7 @@ module Brcmptop (
     output wire o_brlt  // 0 not less than, 1 less than
     // output wire o_bge  // 0 not greater | equal than, 1 greater | equal than
 );
-    wire temp_brlt_s, temp_brlt_u
+    wire temp_brlt_s, temp_brlt_u;
     brcmp cmp (
         .i_rs1(i_rs1),
         .i_rs2(i_rs2),

@@ -1,6 +1,10 @@
 // this file is register file for single cycle processor.
 // ISA based on RV32I
 
+//`include "definitions.v"
+`default_nettype none
+`timescale 1ns/1ns
+
 module Reg_file (
     input wire i_clk,
     input wire i_rst,
@@ -13,7 +17,7 @@ module Reg_file (
     output wire [`DATA_WIDTH-1:0] o_rs2
 );
 
-    reg [`DATA_WIDTH-1:0] registers [`NUM_REGISTER-1:0];
+    reg [`DATA_WIDTH-1:0] registers [0:`NUM_REGISTER-1];
     integer i;
 
     initial begin

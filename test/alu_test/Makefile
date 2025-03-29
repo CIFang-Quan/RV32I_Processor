@@ -1,5 +1,6 @@
 
-
+PWD=$(shell pwd)
+export PYTHONPATH := $(PWD)/../model:$(PYTHONPATH)
 
 
 # use verilator as sim
@@ -10,11 +11,12 @@ TOPLEVEL_LANG ?= verilog
 # to supress warnings
 VERILATOR_ARGS += -Wno-WIDTHTRUNC
 # source code list 
-VERILOG_SOURCES = ../../alu.v
+VERILOG_SOURCES = ../../definitions.v \
+				 ../../alu.v \
 #$(shell find ../../ -name "*.v")
 #TOP LEVEL module
 
-TOPLEVEL = ALU
+TOPLEVEL = Alu
 # module direct to test
 MODULE = alu_test
 

@@ -1,5 +1,9 @@
 // this file is helper for 4 bit mux 
 
+//`include "definitions.v"
+`default_nettype none
+`timescale 1ns/1ns
+
 module Mux4 (
     input wire [`DATA_WIDTH-1:0] i_a,
     input wire [`DATA_WIDTH-1:0] i_b,

@@ -2,6 +2,10 @@
 // dmem is a memory that store/load data
 // it only support read/write operation
 
+//`include "definitions.v"
+`default_nettype none
+`timescale 1ns/1ns
+
 module Dmem (
     input wire i_clk,
     input wire i_rst,
@@ -12,7 +16,10 @@ module Dmem (
     input wire [`ADDR_WIDTH-1:0] i_addr,
     output reg [`DATA_WIDTH-1:0] o_data
 );
-    reg [`ADDR_WIDTH-1:0] mem[0:1023];
+    // just for test purpose
+    reg [`DATA_WIDTH-1:0] mem[0:1023];
+    // reg [`DATA_WIDTH-1:0] mem[0:(1<<(`ADDR_WIDTH-2))-1]; // 2^32 byte
+   
     // init dmem all 0
     integer i;
     initial begin
@@ -43,13 +50,13 @@ module Dmem (
         end
         end else begin
             if (i_st) 
-                mem[i_addr[31:2]] <= i_data; 
+                mem[i_addr >> 2] <= i_data; 
         end
     end
     // Asynchronous read - outside the clocked always block
     always @* begin
         if (i_ld)
-            o_data = mem[i_addr[31:2]];
+            o_data = mem[i_addr >> 2];
         else
             o_data = 32'b0;
     end

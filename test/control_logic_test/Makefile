@@ -1,5 +1,6 @@
 
-
+PWD=$(shell pwd)
+export PYTHONPATH := $(PWD)/../model:$(PYTHONPATH)
 
 
 # use verilator as sim
@@ -10,11 +11,12 @@ TOPLEVEL_LANG ?= verilog
 # to supress warnings
 VERILATOR_ARGS += -Wno-WIDTHTRUNC -Wno--CASEINCOMPLETE
 # source code list 
-VERILOG_SOURCES = ../../control_logic.v
+VERILOG_SOURCES = ../../definitions.v \
+				 ../../control_logic.v
 #$(shell find ../../ -name "*.v")
 #TOP LEVEL module
 
-TOPLEVEL = control_logic
+TOPLEVEL = Control_logic
 # module direct to test
 MODULE = control_logic_test
 

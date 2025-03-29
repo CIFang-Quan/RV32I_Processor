@@ -2,6 +2,10 @@
 // single cycle processor 
 // it will generate control signals for ALU, MUX, and dMEM, brcmp
 
+//`include "definitions.v"
+`default_nettype none
+`timescale 1ns/1ns
+
 module Control_logic (
     input wire [31:0] i_inst,
     input wire i_breq,
@@ -27,6 +31,17 @@ module Control_logic (
 
 
     always @(*) begin
+        // just avoid latches
+        o_pcsel = 1'b0;    // by deafult pc+4
+        o_mem_r = 1'b0;    // no need to read from dmem
+        o_mem_w = 1'b0;    // no need write to dmem
+        o_reg_w = 1'b0;    // no need to write to rd
+        o_imm_sel = `IMM_NOP; // no immediate
+        o_alu_ctrl = `OP_ALU_NOP; // no operation
+        o_op1_sel = 1'b0; // rs1
+        o_op2_sel = 1'b1; // rs2
+        o_brun = 1'b0; // unsigned compare
+        o_wb_sel = 2'b00; // write data from dmem to rd
         case (opcode)
             `OP_LUI: begin // LUI
                 o_pcsel = 1'b0;        // by deafult pc+4
@@ -110,6 +125,10 @@ module Control_logic (
                         if (~i_brlt) begin
                             o_pcsel = 1'b1;
                         end
+                    end
+                    default: begin
+                        //just avoid latches
+                        //TODO: implement default case
                     end
                 endcase
             end
@@ -233,12 +252,8 @@ module Control_logic (
                 //TODO: implement SYSTEM
             end
             default: begin
-                o_pcsel = 1'b0;    // by deafult pc+4
-                o_mem_r = 1'b0;    // no need to read from dmem
-                o_mem_w = 1'b0;    // no need write to dmem
-                o_reg_w = 1'b0;    // no need to write to rd
-                o_imm_sel = `IMM_NOP; // no immediate
-                o_alu_ctrl = `OP_ALU_NOP; // no operation
+                // just avoid latches
+                //TODO: implement default case
             end
         endcase
     end

@@ -3,6 +3,10 @@
 // it accepts 32-bit i_inst and generates 32-bit immediate value.
 // and have 2 select bits to select the type of immediate value to be generated.
 
+//`include "definitions.v"
+`default_nettype none
+`timescale 1ns/1ns
+
 module Immgen (
     input wire [2:0] i_imm_ctrl,
     input wire [`INST_WIDTH-1:0] i_inst,

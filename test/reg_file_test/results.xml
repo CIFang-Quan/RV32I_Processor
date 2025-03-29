@@ -1,8 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1742710448" />
-    <testcase name="x0_test" classname="reg_file_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/reg_file_test/reg_file_test.py" lineno="7" time="0.0007152557373046875" sim_time_ns="10.001" ratio_time="13982.411434666667" />
-    <testcase name="regular_reg_test" classname="reg_file_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/reg_file_test/reg_file_test.py" lineno="23" time="0.0007538795471191406" sim_time_ns="40.001000000000005" ratio_time="53060.200602150544" />
-    <testcase name="reg_write_test" classname="reg_file_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/reg_file_test/reg_file_test.py" lineno="49" time="0.0010013580322265625" sim_time_ns="40.001" ratio_time="39946.7510247619" />
+    <property name="random_seed" value="1743261836" />
+    <testcase name="reg_write_test" classname="reg_file_test" file="/home/tsingfong/Arch/RV32I_Processor/test/reg_file_test/reg_file_test.py" lineno="61" time="0.0005290508270263672" sim_time_ns="30.001" ratio_time="56707.2169013069" />
   </testsuite>
 </testsuites>

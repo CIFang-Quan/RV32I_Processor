@@ -1,5 +1,6 @@
 
-
+PWD=$(shell pwd)
+export PYTHONPATH := $(PWD)/../model:$(PYTHONPATH)
 
 
 # use verilator as sim
@@ -10,11 +11,12 @@ TOPLEVEL_LANG ?= verilog
 # to supress warnings
 VERILATOR_ARGS += -Wno-WIDTHTRUNC
 # source code list 
-VERILOG_SOURCES = ../../branch_compar.v
+VERILOG_SOURCES = ../../definitions.v \
+				 ../../branch_compar.v
 #$(shell find ../../ -name "*.v")
 #TOP LEVEL module
 
-TOPLEVEL = brcmptop
+TOPLEVEL = Brcmptop
 # module direct to test
 MODULE = br_cmp_test
 

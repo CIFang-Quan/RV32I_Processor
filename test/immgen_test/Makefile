@@ -1,5 +1,6 @@
 
-
+PWD=$(shell pwd)
+export PYTHONPATH := $(PWD)/../model:$(PYTHONPATH)
 
 
 # use verilator as sim
@@ -9,11 +10,12 @@ SIM ?= verilator
 TOPLEVEL_LANG ?= verilog
 
 # source code list 
-VERILOG_SOURCES = ../../immgen.v
+VERILOG_SOURCES = ../../definitions.v \
+				 ../../immgen.v
 #$(shell find ../../ -name "*.v")
 #TOP LEVEL module
 
-TOPLEVEL = immgen
+TOPLEVEL = Immgen
 
 # module direct to test
 MODULE = immgen_test
