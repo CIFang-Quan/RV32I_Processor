@@ -3,6 +3,12 @@
 import cocotb
 from cocotb.triggers import Timer
 
+# module Imem (
+#     input wire [`ADDR_WIDTH-1:0] i_pc,
+#     output wire [`INST_WIDTH-1:0] o_inst
+#     // output reg [`INST_WIDTH-1:0] o_inst
+# );
+
 @cocotb.test()
 async def test_Imem(dut):
     """Test Instruction Memory"""
@@ -51,16 +57,16 @@ async def test_Imem(dut):
 
     for i in range(0,28):
         # Set PC value
-        dut.pc.value = i*4
+        dut.i_pc.value = i*4
         # Wait longer for signals to propagate
         await Timer(10, units='ns')
         
         # Debug print to see what's happening
-        dut._log.info(f"PC={hex(dut.pc.value.integer)}, instruction={hex(dut.instruction.value.integer)}")
+        dut._log.info(f"PC={hex(dut.i_pc.value.integer)}, instruction={hex(dut.o_inst.value.integer)}")
         
         # Check assertion
-        assert dut.instruction.value.integer == Ins[i], (
-            f"instruction={hex(dut.instruction.value.integer)}, expected={hex(Ins[i])}, iteration={i}"
+        assert dut.o_inst.value.integer == Ins[i], (
+            f"instruction={hex(dut.o_inst.value.integer)}, expected={hex(Ins[i])}, iteration={i}"
         )
         # !!!!!!!!!!!!! 
         # remember instructions should contain an empty row at the end !!!!!!!!!

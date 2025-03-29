@@ -1,5 +1,6 @@
 
-
+PWD=$(shell pwd)
+export PYTHONPATH := $(PWD)/../model:$(PYTHONPATH)
 
 
 # use verilator as sim
@@ -10,7 +11,8 @@ TOPLEVEL_LANG ?= verilog
 # to supress warnings
 VERILATOR_ARGS += -Wno-WIDTHTRUNC
 # source code list 
-VERILOG_SOURCES = ../../imem.v
+VERILOG_SOURCES = ../../definitions.v \
+				 ../../imem.v
 #$(shell find ../../ -name "*.v")
 #TOP LEVEL module
 

@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1742754379" />
-    <testcase name="test_Imem" classname="imem_test" file="/home/hylanc/ucsb_ms/verilog_learn/single_cycle_processor/test/imem_test/imem_test.py" lineno="6" time="0.007210969924926758" sim_time_ns="280.001" ratio_time="38829.866566506855" />
+    <property name="random_seed" value="1743263448" />
+    <testcase name="test_Imem" classname="imem_test" file="/home/tsingfong/Arch/RV32I_Processor/test/imem_test/imem_test.py" lineno="12" time="0.0013051033020019531" sim_time_ns="280.001" ratio_time="214543.17031494336" />
   </testsuite>
 </testsuites>
