@@ -84,8 +84,9 @@ module Control_logic (
                 o_wb_sel = 2'b10; // write pc+4 to rd
                 o_imm_sel = `IMM_I_TYPE; // I-type immediate
                 o_alu_ctrl = `OP_ALU_ADD; // pc + imm use add operation
-            end 
-            `OP_BRANCH: begin // B-type  
+            end
+            `OP_BRANCH: begin // B-type
+                o_pcsel = 1'b0;    // by deafult pc+4
                 o_op1_sel = 1'b1; // current pc
                 o_op2_sel = 1'b0; // immeidate number
                 o_mem_r = 1'b0;    // no need to read from dmem

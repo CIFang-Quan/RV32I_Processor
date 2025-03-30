@@ -26,6 +26,7 @@ module Dmem (
         for (i = 0; i < 1024; i = i + 1) begin
             mem[i] = 32'b0;
         end
+        // $readmemh("data.txt", mem);
     end
     // sync write and sync read X
     // always @(posedge clk or posedge rst) begin

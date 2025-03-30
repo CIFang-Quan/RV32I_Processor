@@ -19,8 +19,12 @@ module Imem (
     // reg [`INST_WIDTH-1:0] mem[0:(1<<(`DATA_WIDTH-2))-1]; // 2^32 byte
     
     // for test purpose, we only have 64 instructions
+    integer i;
     initial begin
-        $readmemh("instructions.txt", mem);
+        for (i = 0; i < 1024; i = i + 1) begin
+            mem[i] = 32'b0;
+        end
+        $readmemh("inst.txt", mem);
         //$display("Mem[0] = %h", mem[0]);
     end
 

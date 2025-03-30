@@ -1,0 +1,9 @@
+finsh FIBONACCI Iteration ver.
+IF YOU WANT TEST FIBONACCI(N)
+PLEASE EDIT "inst.txt" line 3
+
+default :
+    00500293 addi t0, 5
+
+example :
+    00a00293 addi t0, 10

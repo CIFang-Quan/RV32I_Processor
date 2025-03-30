@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1743326477" />
+    <testcase name="test_fibonacci5" classname="top_test" file="/home/tsingfong/Arch/RV32I_Processor/test/top_test/top_test.py" lineno="18" time="0.00812077522277832" sim_time_ns="535.001" ratio_time="65880.53299386395" />
+  </testsuite>
+</testsuites>

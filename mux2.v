@@ -12,9 +12,9 @@ module Mux2 (
 );
     always @* begin
         case (i_sel)
-            2'b00: out = a;
-            2'b01: out = b;
-            default: out = 32'b0;
+            1'b0: o_res = i_a;
+            1'b1: o_res = i_b;
+            default: o_res = 32'b0;
         endcase
     end
 endmodule

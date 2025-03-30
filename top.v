@@ -15,7 +15,10 @@
 module top(
     input wire clk,
     input wire rst,
-    output wire [`DATA_WIDTH-1:0] debug
+    output wire [`ADDR_WIDTH-1:0] pc_out,
+    output wire [`DATA_WIDTH-1:0] regs [31:0],
+    output wire [`DATA_WIDTH-1:0] debug,
+    output wire [`DATA_WIDTH-1:0] debug_valid
 );
     wire [`ADDR_WIDTH-1:0] o_pcreg;
     wire [`ADDR_WIDTH-1:0] o_pcadder;
@@ -84,7 +87,8 @@ module top(
         .i_rs1_addr(o_imem[19:15]),
         .i_rs2_addr(o_imem[24:20]),
         .o_rs1(o_regfile_rd1),
-        .o_rs2(o_regfile_rd2)
+        .o_rs2(o_regfile_rd2),
+        .o_all_regs(regs)
     );
 
     Immgen immgen(
@@ -156,5 +160,9 @@ module top(
         .o_mem_w(decode_dmemw),
         .o_wb_sel(decode_wbsel)
     );
+
+    assign debug = regs[10];
+    assign debug_valid = o_imem;
+    assign pc_out = o_pcreg;
 
 endmodule

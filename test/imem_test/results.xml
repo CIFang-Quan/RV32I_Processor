@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1743263448" />
-    <testcase name="test_Imem" classname="imem_test" file="/home/tsingfong/Arch/RV32I_Processor/test/imem_test/imem_test.py" lineno="12" time="0.0013051033020019531" sim_time_ns="280.001" ratio_time="214543.17031494336" />
+    <property name="random_seed" value="1743303718" />
+    <testcase name="test_Imem" classname="imem_test" file="/home/tsingfong/Arch/RV32I_Processor/test/imem_test/imem_test.py" lineno="12" time="0.0014126300811767578" sim_time_ns="280.001" ratio_time="198212.5424985654" />
   </testsuite>
 </testsuites>
